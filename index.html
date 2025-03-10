@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GreenLeaf Organics</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #f9f9f9;
+    }
+    /* Header */
+    header {
+      background: #4CAF50;
+      padding: 15px;
+      text-align: center;
+      color: white;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background-image: url('https://i.imgur.com/FGmHQJq.jpeg');
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    /* Product Section */
+    .product-section {
+      position: relative;
+      text-align: center;
+      padding: 30px 0;
+    }
+    .product-image {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    .product-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255,255,255,0.8);
+      padding: 15px;
+      border-radius: 8px;
+    }
+    /* Carousel */
+    .carousel {
+      margin: 40px auto;
+      width: 80%;
+      max-width: 600px;
+      overflow: hidden;
+      position: relative;
+    }
+    .carousel img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      display: none;
+      border-radius: 8px;
+    }
+    .carousel img.active {
+      display: block;
+    }
+    /* Google Map */
+    .map-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .map-container iframe {
+      width: 90%;
+      max-width: 600px;
+      height: 400px;
+      border: 0;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    /* YouTube Video */
+    .video-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .video-container iframe {
+      width: 90%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    /* Contact Us */
+    .contact-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .contact-container iframe {
+      width: 90%;
+      max-width: 640px;
+      height: 856px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    /* Three.js Container */
+    #three-container {
+      width: 100%;
+      height: 400px;
+      margin: 40px auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    /* Snowflake Animation */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      user-select: none;
+      pointer-events: none;
+      animation: fall linear infinite;
+      z-index: 9999;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+  <!-- Include three.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <header>
+    <h2>GreenLeaf Organics</h2>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Pure, Organic & Fresh</h1>
+      <p>Your trusted organic grocery in Hyderabad</p>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <img class="product-image" src="https://th.bing.com/th/id/OIG4.nYdGv188TCQTNDhuiX5W?pid=ImgGn">
+    <div class="product-overlay">
+      <h2>Fresh Organic Produce</h2>
+      <p>Healthy Choices for Your Family</p>
+    </div>
+  </section>
+
+  <section class="carousel">
+    <img class="active" src="https://th.bing.com/th/id/OIG3.8mid478vdl5SklKLj8HQ?w=1024&h=1024&rs=1&pid=ImgDetMain">
+    <img src="https://th.bing.com/th/id/OIG3.bHSX013yxbMviwXoK70W?pid=ImgGn">
+    <img src="https://th.bing.com/th/id/OIG3.UOFDsXjZ78LD7rn_cZJl?pid=ImgGn">
+  </section>
+
+  <section class="map-container">
+    <h2>Visit Our Store</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.526058424122!2d78.33880187581157!3d17.434517901444405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb939dae6eb775%3A0x1f7a5db82bcfdfe1!2sIndian%20School%20of%20Business%2C%20ISB%20Rd%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500111!5e0!3m2!1sen!2sin!4v1741251395601!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <section class="video-container">
+    <h2>Watch Our Story</h2>
+    <iframe src="https://www.youtube.com/embed/8PmM6SUn7Es?si=B8WJZyPKqB8NACqv" title="YouTube video player" allowfullscreen></iframe>
+  </section>
+
+  <section class="contact-container">
+    <h2>Contact Us</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScuR53n0ZaZ1k0yNqnMlNmYAOhUlsz7_rgz2JiYUFThLJLhrA/viewform?embedded=true" allowfullscreen></iframe>
+  </section>
+  
+  <!-- Three.js Interactive Section -->
+  <section id="three-container"></section>
+  
+  <footer>
+    &copy; 2025 GreenLeaf Organics | greenleaf.organics@mlbm.com | 9412345678
+  </footer>
+</body>
+</html>
